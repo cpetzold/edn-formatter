@@ -27,6 +27,7 @@
              edn (reader/read-string edn-str)
              container (div "container")]
          (.removeChild js/document.body pre)
+         (.appendChild js/document.head (css/style-el))
          (.appendChild js/document.body container)
 
          (js/console.log "%cEDN Formatter" "font-weight: bold")
