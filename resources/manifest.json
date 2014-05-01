@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "EDN Formatter",
+  "description": "Pretty-prints EDN",
+  "homepage_url": "https://github.com/cpetzold/edn-formatter",
+  "version": "0.1",
+
+  "minimum_chrome_version": "21",
+
+  "permissions": [
+      "<all_urls>",
+      "tabs",
+      "webRequest",
+      "webRequestBlocking"
+  ],
+
+  "background": {
+    "scripts": [
+      "js/edn-formatter.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/edn-formatter.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

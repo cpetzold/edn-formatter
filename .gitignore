@@ -1,0 +1,12 @@
+/target
+/classes
+/checkouts
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+resources/js/edn-formatter
+resources/js/edn-formatter.js
+resources/js/edn-formatter.js.map
