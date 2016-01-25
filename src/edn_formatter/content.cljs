@@ -6,6 +6,10 @@
    [edn-formatter.util :refer [background?]]
    [edn-formatter.css :as css]))
 
+(reader/register-default-tag-parser!
+  (fn [tag value]
+    (str tag "# " value)))
+
 (defn div [id]
   (let [el (js/document.createElement "div")]
     (set! (.-id el) id)
